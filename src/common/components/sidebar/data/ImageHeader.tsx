@@ -8,7 +8,7 @@ const ImageHeader = () => {
       <MotionScale>
       <Image
         alt="img"
-        src="/img/upwork.jpeg"
+        src="/img/upworkE.jpg"
         width={640}
         height={663}
         priority

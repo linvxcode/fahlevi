@@ -8,6 +8,7 @@ export interface InstrumentData {
   title: string;
   slug: string;
   img: string;
+  new: string;
 }
 
 export interface InstrumentsPageProps {
