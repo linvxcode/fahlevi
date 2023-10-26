@@ -11,7 +11,7 @@ const ImageHeader = () => {
         src="/img/upworkE.jpg"
         width={640}
         height={663}
-        priority
+        loading="lazy"
         className="rounded-full border-[3px] mt-5 dark:border-[#171717] border-[#fff] w-[100px] relative z-[9]"
         />
         </MotionScale>
