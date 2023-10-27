@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 
 interface PianoKey {
@@ -6,28 +5,31 @@ interface PianoKey {
   label: string;
   type: string;
   className: string;
+  src: string;
 }
 
 interface PianiKeysProps {
-  instrumentData: {  id: string;
+  instrumentData: {
+    id: string;
     title: string;
     slug: string;
     img: string;
-    c4:string;
-  }
+    c4: string;
+  };
 }
 
 const PianoKeys: React.FC = () => {
   const [active, setActive] = useState<{ [note: string]: boolean }>({
     C4: false,
+    C44:false,
     D4: false,
     E4: false,
-    F4:false,
-    G4:false,
-    A4:false,
-    B4:false,
-    C5:false,
-    D5:false
+    F4: false,
+    G4: false,
+    A4: false,
+    B4: false,
+    C5: false,
+    D5: false,
   });
 
   const playMusic = (note: string) => {
@@ -39,7 +41,6 @@ const PianoKeys: React.FC = () => {
     }
   };
 
-
   const handleClick = (note: string) => {
     if (active[note]) {
       stopMusic(note);
@@ -50,42 +51,101 @@ const PianoKeys: React.FC = () => {
   };
 
   const pianoKeys: PianoKey[] = [
-    { note: "C4", label: "C4", type: "white" , className: "bg-white"},
-    { note: "C44", label: "C44", type: "black" , className: "bg-black text-white"},
-    { note: "D4", label: "D4", type: "white", className: "bg-white"},
-    { note: "E4", label: "E4", type: "white", className: "bg-white"},
-    { note: "F4", label: "F4", type: "white", className: "bg-white"},
-    { note: "G4", label: "G4", type: "white", className: "bg-white"},
-    { note: "A4", label: "A4", type: "white", className: "bg-white"},
-    { note: "B4", label: "B4", type: "white", className: "bg-white"},
-    { note: "C5", label: "C5", type: "white", className: "bg-white"},
-    { note: "D5", label: "D5", type: "white", className: "bg-white"},
+    {
+      note: "C4",
+      label: "C4",
+      type: "white",
+      className: "bg-white",
+      src: "/audio/whitetuts/c4.wav",
+    },
+    {
+      note: "C44",
+      label: "C44",
+      type: "black",
+      className: "bg-black text-white",
+      src: "/audio/blacktuts/c44.wav",
+    },
+    {
+      note: "D4",
+      label: "D4",
+      type: "white",
+      className: "bg-white",
+      src: "/audio/whitetuts/d4.wav",
+    },
+    {
+      note: "E4",
+      label: "E4",
+      type: "white",
+      className: "bg-white",
+      src: "/audio/whitetuts/e4.wav",
+    },
+    {
+      note: "F4",
+      label: "F4",
+      type: "white",
+      className: "bg-white",
+      src: "/audio/whitetuts/f4.wav",
+    },
+    {
+      note: "G4",
+      label: "G4",
+      type: "white",
+      className: "bg-white",
+      src: "/audio/whitetuts/g4.wav",
+    },
+    {
+      note: "A4",
+      label: "A4",
+      type: "white",
+      className: "bg-white",
+      src: "/audio/whitetuts/a4.wav",
+    },
+    {
+      note: "B4",
+      label: "B4",
+      type: "white",
+      className: "bg-white",
+      src: "/audio/whitetuts/b4.wav",
+    },
+    {
+      note: "C5",
+      label: "C5",
+      type: "white",
+      className: "bg-white",
+      src: "/audio/whitetuts/c5.wav",
+    },
+    {
+      note: "D5",
+      label: "D5",
+      type: "white",
+      className: "bg-white",
+      src: "/audio/whitetuts/d5.wav",
+    },
   ];
 
   const audioPiano = [
-    {id : "C4", src: '/audio/whitetuts/c4.wav'},
-    {id : "C44",  src: '/audio/blacktuts/c44.wav'},
-    {id : "D4",  src: '/audio/whitetuts/d4.wav'},
-    {id : "D44",  src: '/audio/blacktuts/d44.wav'},
-    {id : "E4",  src: '/audio/whitetuts/e4.wav'},
-    {id : "F4",  src: '/audio/whitetuts/f4.wav'},
-    {id : "F44",  src: '/audio/blacktuts/f44.wav'},
-    {id : "G4",  src: '/audio/whitetuts/g4.wav'},
-    {id : "G44",  src: '/audio/blacktuts/g44.wav'},
-    {id : "A4",  src: '/audio/whitetuts/a4.wav'},
-    {id : "A44",  src: '/audio/blacktuts/a44.wav'},
-    {id : "B4",  src: '/audio/whitetuts/b4.wav'},
-    {id : "C5",  src: '/audio/whitetuts/c5.wav'},
-    {id : "D5",  src: '/audio/whitetuts/d5.wav'},
-    
-  ]
+    { id: "C4", src: "/audio/whitetuts/c4.wav" },
+    { id: "C44", src: "/audio/blacktuts/c44.wav" },
+    { id: "D4", src: "/audio/whitetuts/d4.wav" },
+    { id: "D44", src: "/audio/blacktuts/d44.wav" },
+    { id: "E4", src: "/audio/whitetuts/e4.wav" },
+    { id: "F4", src: "/audio/whitetuts/f4.wav" },
+    { id: "F44", src: "/audio/blacktuts/f44.wav" },
+    { id: "G4", src: "/audio/whitetuts/g4.wav" },
+    { id: "G44", src: "/audio/blacktuts/g44.wav" },
+    { id: "A4", src: "/audio/whitetuts/a4.wav" },
+    { id: "A44", src: "/audio/blacktuts/a44.wav" },
+    { id: "B4", src: "/audio/whitetuts/b4.wav" },
+    { id: "C5", src: "/audio/whitetuts/c5.wav" },
+    { id: "D5", src: "/audio/whitetuts/d5.wav" },
+  ];
 
   const stopMusic = (note: string) => {
     setActive({ ...active, [note]: false });
   };
 
   useEffect(() => {
-      const keyMapping: { [key: string]: string } = {
+    const keyMapping: { [key: string]: string } = {
       a: "C4",
       s: "D4",
       d: "E4",
@@ -155,36 +215,38 @@ const PianoKeys: React.FC = () => {
   return (
     <div className="flex">
       {pianoKeys.map((key) => (
-         <div
-         key={key.note}
-         data-note={key.note}
-         className={`${key.className} key white relative  h-[200px] ${active[key.note] ? 'bg-[#949191] active' : 'bg-white'}}`}
-         onClick={() => handleClick(key.note)}
-       >
-         <h3 className={`label text-black ${key.type === 'black' ? `text-white` :  `text-black`}`}>{key.label}</h3>
-         
-       </div>
+        <div
+          key={key.note}
+          data-note={key.note}
+          className={`${key.className} key white relative h-[200px] ${
+            active[key.note] ? "bg-[#949191] active relative" : ""
+          }}`}
+          onClick={() => handleClick(key.note)}
+        >
+            <h3
+              className={`label text-black ${
+                key.type === "black" ? `text-white` : `text-black`
+              }`}
+            >
+              {key.label}
+            </h3>
+
+          <audio
+            id={key.note}
+            preload="auto"
+            src={key.src}
+            key={key.note}
+          ></audio>
+        </div>
       ))}
-      {audioPiano?.map((audio, index) => (
+      {/* {audioPiano?.map((audio, index) => (
         <audio id={audio.id} preload="auto" src={audio.src} key={index}></audio>
-      ))}
+      ))} */}
     </div>
   );
 };
 
 export default PianoKeys;
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import React, { useState, useEffect } from "react";
 
@@ -360,4 +422,3 @@ export default PianoKeys;
 // };
 
 // export default PianoKeys;
-

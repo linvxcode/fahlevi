@@ -155,7 +155,17 @@ body {
   /* .key:hover {
 	background-color: #F0F0F0;
   } */
+/* .key{
+  background-color: white;
+} */
+.active{
+	background-color: #C0C0C0;
+  position: relative;
+}
+.bg-blak{
+	background-color: #000000;
 
+}
   .key:active {
 	background-color: #C0C0C0;
   }
@@ -230,3 +240,8 @@ ul {
   height: 20px;
   flex: 1;
 } */
+
+.pick-1{
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.00) 0.41%, rgba(0, 0, 0, 0.00) 0.55%), linear-gradient(180deg, rgba(0, 0, 0, 0.10) 10%, rgba(255, 255, 255, 0.25) 15%, rgba(255, 255, 255, 0.80) 30%, rgba(255, 255, 255, 0.25) 45%, rgba(0, 0, 0, 0.60) 90%), #BA9;
+box-shadow: 0.60032px 5.55296px 0.30016px 0px rgba(0, 0, 0, 0.10);
+}
