@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@nextui-org/react": "^2.1.13",
     "clsx": "^2.0.0",
+    "dotenv": "^16.3.1",
     "firebase": "^10.5.0",
     "framer-motion": "^10.16.4",
     "next": "13.5.6",

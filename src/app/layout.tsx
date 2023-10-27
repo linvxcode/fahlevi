@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import '../common/styles/globals.css'
 import { Sidebar } from '@/common/components/sidebar'
 import { Providers } from '@/common/libs/Providers'
+require('dotenv').config()
 
 const inter = Inter({ subsets: ['latin'] })
 
