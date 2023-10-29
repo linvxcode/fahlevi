@@ -15,7 +15,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ children }) => {
           <HeaderSide />
         </div>
       </div>
-      <div className=" max-md:flex hidden">
+      <div className="max-md:flex hidden">
         <div className="">
           <MobileSidebar/>
           {/* <HeaderSide /> */}

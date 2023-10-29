@@ -31,18 +31,24 @@ const HeadInstruments = ({ view, data }: ProjectProps) => {
 
   }, [isMobile, view]);
 
+  const Hover: any = isMobile ? {
+    whileHover: {}
+  } : {
+    whileHover: {scale: 1.03 , transition: {duration: 0.2}}
+  }
+
   return (
     <MotionConfig reducedMotion={isMobile ? "always" : "never"}>
-      <div className="grid grid-cols-2 flex-row flex-wrap gap-5 mt-10 max-md:justify-center">
+      <div className="grid md:grid-cols-2 grid-cols-1 flex-row flex-wrap gap-5 mt-10 max-md:justify-center">
         {data?.map((item, index) => (
           <motion.div
             key={index}
-            className="relative  group rounded-xl w-[100%] border-neutral-300 dark:border-neutral-700 border-[1px] dark:bg-neutral-800/80 bg-neutral-200/80 lg:hover:shadow-xl lg:hover:transition-all lg:hover:duration-300 "
+            className="relative  group rounded-xl w-[100%] border-neutral-300 dark:border-neutral-700 border-[1px] dark:bg-neutral-800 bg-neutral-100 lg:hover:shadow-xl lg:hover:transition-all lg:hover:duration-300 "
             viewport={{ once: true }}
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            whileHover={{scale: 1.05 , transition: {duration: 0.2}}}
             transition={{ duration: 0.3, delay: index * 0.1 }}
+            {...Hover}
           >
             <span className="absolute top-0 z-[9] w-auto text-center rounded-tr-xl rounded-bl-xl right-0 bg-green-600 text-black font-medium py-1 px-5">{item.new}</span>
             <Link href={`/instruments/${item.slug}`}>

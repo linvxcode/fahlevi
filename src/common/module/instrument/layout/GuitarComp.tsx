@@ -1,19 +1,19 @@
-'use client'
-import Back from '@/common/components/element/Back'
-import Breakline from '@/common/components/element/Breakline';
-import Image from '@/common/components/element/Image';
-import SectionHeading from '@/common/components/element/SectionHeading';
-import SubHead from '@/common/components/element/SubHead';
-import { retriveData } from '@/common/libs/firebase/service';
-import React, { useEffect, useState } from 'react'
-import Loading from '../component/Loading';
-import GuitarPage from '../component/GuitarPage';
+"use client";
+import Back from "@/common/components/element/Back";
+import Breakline from "@/common/components/element/Breakline";
+import Image from "@/common/components/element/Image";
+import SectionHeading from "@/common/components/element/SectionHeading";
+import SubHead from "@/common/components/element/SubHead";
+import { retriveData } from "@/common/libs/firebase/service";
+import React, { useEffect, useState } from "react";
+import Loading from "../component/Loading";
+import GuitarPage from "../component/GuitarPage";
 
 interface GuitarProps {
-  params: {slug: string}
+  params: { slug: string };
 }
 
-const GuitarComp = ({params} : GuitarProps) => {
+const GuitarComp = ({ params }: GuitarProps) => {
   const [loading, setLoading] = useState<boolean>(true);
   const { slug } = params;
 
@@ -33,15 +33,15 @@ const GuitarComp = ({params} : GuitarProps) => {
   }, [slug]);
   return (
     <div>
+      <Back href="/instruments" className="mb-5">
+        Back
+      </Back>
       {loading ? (
         <>
           <Loading />
         </>
       ) : (
         <>
-          <Back href="/instruments" className="mb-5">
-            Back
-          </Back>
           <Image
             src={`${instrumentData?.img}`}
             alt={`${instrumentData?.slug}`}
@@ -53,15 +53,15 @@ const GuitarComp = ({params} : GuitarProps) => {
           <Breakline />
           <SectionHeading title={`${instrumentData?.title} Virtual`} />
 
-              <SubHead
-                title="i made this for have fun , i hope you guys can fun with this piano virtual"
-                className="mt-3 mb-8"
-              />
-              <GuitarPage/>
-            </>
+          <SubHead
+            title="i made this for have fun , i hope you guys can fun with this guitar virtual"
+            className="mt-3 mb-8"
+          />
+          <GuitarPage />
+        </>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default GuitarComp
+export default GuitarComp;

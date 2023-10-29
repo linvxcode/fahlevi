@@ -8,21 +8,21 @@ import { retriveData } from '@/common/libs/firebase/service'
 import { GetServerSideProps } from "next";
 
 
-interface HomeProps {
-  isMobile: boolean;
-}
+// interface HomeProps {
+//   isMobile: boolean;
+// }
 
 const Instrument = async () => {
   const res = await retriveData('instruments');
   const data = res
   return (
     <>
-    {/* <Layouts isMobile={isMobile}> */}
+    <Layouts >
      <SectionHeading title='Instruments' />
      <SubHead title='I recreated this feature from the results of my previous project' className='mt-3' />
      <Breakline/>
      <HeadInstruments view='grid' data={data} />
-    {/* </Layouts> */}
+    </Layouts>
     </>
   )
 }

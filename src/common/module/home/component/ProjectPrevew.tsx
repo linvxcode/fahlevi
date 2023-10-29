@@ -33,7 +33,7 @@ const ProjectPrevew = () => {
 
             </div>
             <div className="p-5">
-              <p className="md:text-[17px] line-clamp-3 font-medium text-neutral-600 dark:text-neutral-200 lg:group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-all duration-300">
+              <p className="md:text-[17px] line-clamp-3 font-medium text-neutral-600 dark:text-neutral-200 lg:group-hover:text-[#818cf8] dark:group-hover:text-[#818cf8] transition-all duration-300">
                 {item.body}
               </p>
               <h3></h3>

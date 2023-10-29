@@ -21,7 +21,7 @@ const ImageHeader = () => {
         <div className="h-8 w-[50%] -rotate-[57deg] absolute top-[15px]  bg-neutral-200 "></div>
         <div className="w-full h-20 bg-[#d4d4d4] absolute top-0 z-[-9] rounded-xl"></div>
       </MotionOpacity>
-      <div className="absolute top-[40px] right-0 z-[99]">
+      <div className="absolute top-[40px] right-0 z-[99] ">
         <DarkmodeSwitch />
       </div>
     </div>

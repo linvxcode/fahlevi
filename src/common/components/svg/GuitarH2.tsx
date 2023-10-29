@@ -1,9 +1,93 @@
-import React from "react";
+import { Button } from "@nextui-org/react";
+import React, { useState } from "react";
+
+interface PianoKey {
+  note: string;
+  label: string;
+  type: string;
+  className: string;
+  src: string;
+}
 
 const GuitarH2 = () => {
+  const [active, setActive] = useState<{ [note: string]: boolean }>({
+    E1: false,
+    B2: false,
+    G2: false,
+    D2: false,
+    A1: false,
+    E3: false,
+  });
+
+  const pianoKeys: PianoKey[] = [
+    {
+      note: "E1",
+      label: "E",
+      type: "white",
+      className: "bg-white",
+      src: "/audio/guitar/tuts/E3.wav",
+    },
+    {
+      note: "B2",
+      label: "B",
+      type: "white",
+      className: "bg-white",
+      src: "/audio/guitar/tuts/B2.wav",
+    },
+    {
+      note: "G2",
+      label: "G",
+      type: "white",
+      className: "bg-white",
+      src: "/audio/guitar/tuts/G2.wav",
+    },
+    {
+      note: "D2",
+      label: "D",
+      type: "white",
+      className: "bg-white",
+      src: "/audio/guitar/tuts/D2.wav",
+    },
+    {
+      note: "A1",
+      label: "A",
+      type: "white",
+      className: "bg-white",
+      src: "/audio/guitar/tuts/A1.wav",
+    },
+    {
+      note: "E3",
+      label: "E",
+      type: "white",
+      className: "bg-white",
+      src: "/audio/guitar/tuts/E1.wav",
+    },
+  ];
+
+  const playMusic = (note: string) => {
+    const audio = document.getElementById(note) as HTMLAudioElement;
+    if (audio) {
+      audio.currentTime = 0;
+      audio.play();
+      setActive({ ...active, [note]: true });
+    }
+  };
+
+  const handleClick = (note: string) => {
+    if (active[note]) {
+      stopMusic(note);
+    } else {
+      playMusic(note);
+    }
+    setActive((prevActive) => ({ ...prevActive, [note]: !prevActive[note] }));
+  };
+
+  const stopMusic = (note: string) => {
+    setActive({ ...active, [note]: false });
+  };
+
   return (
     <div className="relative">
-
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -40,27 +124,26 @@ const GuitarH2 = () => {
           />
         </defs>
       </svg>
-      
-    <div className="absolute flex top-0 mx-auto right-[10px] flex-col items-center">
-        <h1 className="mb-2 mt-[3px] text-xl text-black ">
-            E
-        </h1>
-        <h1 className="mb-2 text-xl text-black"> 
-            B
-        </h1>
-        <h1 className="mb-2 text-xl text-black">
-            G
-        </h1>
-        <h1 className="mb-2 text-xl text-black">
-            D
-        </h1>
-        <h1 className="mb-2 text-xl text-black">
-            A
-        </h1>
-        <h1 className="mb-3 text-xl text-black">
-            E
-        </h1>
-    </div>
+
+      <div className="absolute flex top-0 mx-auto  flex-col items-center">
+        {pianoKeys.map((key) => (
+          <div className="flex justify-center flex-col" key={key.note}>
+            <Button
+              data-note={key.note}
+              onClick={() => handleClick(key.note)}
+              className="px-0 h-[2.24rem] min-w-unit-10 relative z-[99] bg-transparent"
+            >
+              <h1 className="text-xl text-black text-center">{key.label}</h1>
+            </Button>
+            <audio
+              id={key.note}
+              preload="auto"
+              src={key.src}
+              key={key.note}
+            ></audio>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

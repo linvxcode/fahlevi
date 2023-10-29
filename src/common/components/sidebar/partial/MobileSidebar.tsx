@@ -34,7 +34,7 @@ const MobileSidebar = () => {
 
   return (
     <motion.nav
-      className={ `block absolute top-0 right-0 bottom-0 w-full`}
+      className={`${isOpen ? 'fixed z-[99]' : "absolute"} block  top-0 right-0 bottom-0 w-full`}
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}

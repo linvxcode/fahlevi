@@ -35,15 +35,15 @@ const InstrumentDetail = ({ params }: instrumentProps) => {
 
   return (
     <div>
+      <Back href="/instruments" className="mb-5">
+        Back
+      </Back>
       {loading ? (
         <>
           <Loading />
         </>
       ) : (
         <>
-          <Back href="/instruments" className="mb-5">
-            Back
-          </Back>
           <Image
             src={`${instrumentData?.img}`}
             alt={`${instrumentData?.slug}`}

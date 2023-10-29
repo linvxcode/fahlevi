@@ -5,7 +5,7 @@ import GuitarPick from "./GuitarPick";
 
 const HeadGuitar = () => {
   return (
-    <div className="flex">
+    <div className="flex overflow-x-scroll no-scrollbar">
       <div className="relative">
         <GuitarH />
         <div className="absolute top-0 right-[60px]">
