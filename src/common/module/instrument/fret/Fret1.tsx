@@ -2,7 +2,7 @@ import { Button } from '@nextui-org/react'
 import React from 'react'
 
 interface Fret1Props {
-    pianoKeys: PianoKey[];
+    guitarKeys: PianoKey[];
     handleClick: (note: string) => void;
 }
 
@@ -14,11 +14,11 @@ interface PianoKey {
     src: string;
   }
 
-const Fret1: React.FC<Fret1Props> = ({ pianoKeys, handleClick }) => { 
+const Fret1: React.FC<Fret1Props> = ({ guitarKeys, handleClick }) => { 
   return (
     <div>
       <div className="w-[60px] h-[210px] top-[-15px] border-r  border-[#000] absolute">
-        {pianoKeys.map((key) => (
+        {guitarKeys.map((key) => (
           <div className="flex justify-center flex-col" key={key.note}>
             <Button
               data-note={key.note}

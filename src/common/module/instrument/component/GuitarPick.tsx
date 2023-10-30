@@ -13,6 +13,7 @@ import Fret9 from "../fret/Fret9";
 import Fret10 from "../fret/Fret10";
 import Fret11 from "../fret/Fret11";
 import Fret12 from "../fret/Fret12";
+import Fret13 from "../fret/Fret13";
 
 interface PianoKey {
   note: string;
@@ -43,7 +44,7 @@ const GuitarPick = () => {
       label: "F4",
       type: "white",
       className: "bg-white",
-      src: "/audio/guitar/whitetuts/f.wav",
+      src: "/audio/guitar/tuts/tutsup/f+.wav",
     },
     {
       note: "C4",
@@ -107,7 +108,7 @@ const GuitarPick = () => {
   return (
     <div className="flex flex-col ">
       <Pick/>
-      <Fret1 pianoKeys={pianoKeys} handleClick={handleClick} />
+      <Fret1 guitarKeys={pianoKeys} handleClick={handleClick} />
       <Fret2 />
       <Fret3/>
       <Fret4/>
@@ -119,6 +120,7 @@ const GuitarPick = () => {
       <Fret10/>
       <Fret11/>
       <Fret12/>
+      <Fret13/>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { Button } from "@nextui-org/react";
 import React, { useState } from "react";
 
-interface fret12 {
+interface fret13 {
   note: string;
   label: string;
   type: string;
@@ -9,18 +9,18 @@ interface fret12 {
   src: string;
 }
 
-const Fret12 = () => {
+const Fret13 = () => {
   const [active, setActive] = useState<{ [note: string]: boolean }>({
 
   });
 
-  const fret12: fret12[] = [
+  const fret13: fret13[] = [
     {
-      note: "E",
-      label: "E",
+      note: "FF",
+      label: "FF",
       type: "white",
       className: "bg-white",
-      src: "/audio/guitar/tuts/tutsup/e+.wav",
+      src: "/audio/guitar/tuts/tutsup/f++.wav",
     },
     // {
     //   note: "C4",
@@ -83,8 +83,8 @@ const Fret12 = () => {
 
   return (
     <div>
-      <div className="w-[60px] left-[660px] h-[210px] top-[-15px] border-r  border-[#000] absolute">
-      {fret12.map((key) => (
+      <div className="w-[60px] left-[720px] h-[210px] top-[-15px] border-r  border-[#000] absolute">
+      {fret13.map((key) => (
           <div className="flex justify-center flex-col" key={key.note}>
             <Button
               data-note={key.note}
@@ -101,11 +101,10 @@ const Fret12 = () => {
             ></audio>
           </div>
         ))}
-          <h1 className="text-4xl absolute top-[25px] left-[20px] rounded-full bg-neutral-700 w-[20px] h-[20px] text-black text-center"></h1>
-          <h1 className="text-4xl absolute bottom-[22px] left-[20px] rounded-full bg-neutral-700 w-[20px] h-[20px] text-black text-center"></h1>
+          
       </div>
     </div>
   );
 };
 
-export default Fret12;
+export default Fret13;
