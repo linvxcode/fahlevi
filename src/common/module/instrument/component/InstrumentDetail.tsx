@@ -62,7 +62,9 @@ const InstrumentDetail = ({ params }: instrumentProps) => {
                 title="i made this for have fun , i hope you guys can fun with this piano virtual"
                 className="mt-3 mb-8"
               />
+              <div className="flex">
               <PianoKeys />
+              </div>
             </>
           )}
         </>

@@ -14,10 +14,6 @@ type ProjectProps = {
   view: string;
 }
 
-
-
-
-
 const BodyProj = ({view} : ProjectProps) => {
   const isMobile = useMediaQuery({
     query: '(max-width: 767px)'
@@ -59,7 +55,7 @@ const BodyProj = ({view} : ProjectProps) => {
     <MotionConfig reducedMotion={isMobile ? 'always' : "never"}>
     <div className="grid md:grid-cols-2 grid-cols-1 flex-row flex-wrap gap-5 mt-10 max-md:justify-center">
       {ProjectItems?.map((item, index) => (
-        <motion.div key={index} className=" group rounded-xl w-[100%] border-neutral-300 dark:border-neutral-700 border-[1px] dark:bg-neutral-800 bg-neutral-100 lg:hover:shadow-xl lg:hover:transition-all lg:hover:duration-300 "
+        <motion.div key={index} className=" group rounded-xl w-[100%] border-neutral-300 dark:border-neutral-700 border-[1px] dark:bg-neutral-800 bg-neutral-100 lg:hover:shadow-xl "
         // {...Anim}
         {...Hover}
         initial={{ opacity: 0, scale: 0.8 }}

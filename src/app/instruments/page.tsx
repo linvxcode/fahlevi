@@ -1,11 +1,11 @@
-import Instrument from "@/common/module/instrument"
+import Instrument from "@/common/module/instrument";
 
 const Instruments = () => {
-    return (
-        <>
-        <Instrument/>
-        </>
-    )
-}
+  return (
+    <>
+      <Instrument />
+    </>
+  );
+};
 
-export default Instruments
+export default Instruments;

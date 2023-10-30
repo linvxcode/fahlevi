@@ -43,7 +43,7 @@ const HeadInstruments = ({ view, data }: ProjectProps) => {
         {data?.map((item, index) => (
           <motion.div
             key={index}
-            className="relative  group rounded-xl w-[100%] border-neutral-300 dark:border-neutral-700 border-[1px] dark:bg-neutral-800 bg-neutral-100 lg:hover:shadow-xl lg:hover:transition-all lg:hover:duration-300 "
+            className="relative  group rounded-xl w-[100%] border-neutral-300 dark:border-neutral-700 border-[1px] dark:bg-neutral-800 bg-neutral-100 lg:hover:shadow-xl "
             viewport={{ once: true }}
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}

@@ -121,21 +121,44 @@ body {
 
 .active{
 	background-color: #C0C0C0;
-  position: relative;
+  /* position: relative; */
 }
 .bg-blak{
 	background-color: #000000;
 
 }
+/* .key{
+  background: #e0e0e0;
+  box-shadow:  5px 5px 16px #a8a8a8,
+               -1px -1px 1px #ffffff;
+} */
   .key:active {
 	background-color: #C0C0C0;
+  /* background: #ffffff;
+  box-shadow: inset 5px 5px 16px #bfbfbf,
+              inset -5px -5px 16px #ffffff; */
+  
+  
   }
 
   .key.hover{
 	background-color: #ccc;
 	box-shadow: 0 0 10px #888;
   }
-
+  .black-key {
+    width: 40px; 
+    left: 35px;
+  
+    @media (max-width: 768px) {
+      width: 30px; 
+      left: 25px;
+    }
+  
+    @media (max-width: 480px) {
+      width: 20px; 
+      left: 15px
+    }
+  }
 
 .pick-1{
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.00) 0.41%, rgba(0, 0, 0, 0.00) 0.55%), linear-gradient(180deg, rgba(0, 0, 0, 0.10) 10%, rgba(255, 255, 255, 0.25) 15%, rgba(255, 255, 255, 0.80) 30%, rgba(255, 255, 255, 0.25) 45%, rgba(0, 0, 0, 0.60) 90%), #BA9;
