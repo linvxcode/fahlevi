@@ -60,7 +60,7 @@ const HeadInstruments = ({ view, data }: ProjectProps) => {
                   alt="img"
                   priority
                   className={clsxm(
-                    "sm:rounded-xl sm:h-[100px]",
+                    "sm:rounded-xl w-full sm:h-[100px]",
                     viewOption === "grid"
                       ? "!rounded-t-xl !rounded-b-none object-cover !h-[200px]"
                       : ""
