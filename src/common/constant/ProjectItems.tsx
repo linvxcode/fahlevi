@@ -9,6 +9,30 @@ import TypescriptSvg from "../components/svg/TypescriptSvg"
 
 export const ProjectItems = [
     {
+        title: "Shoes Sport Landing Page",
+        href: '/img/shoes.jpg',
+        w: "1342",
+        h: 659,
+        src: 'https://sport-linvxcode.vercel.app/',
+        body: "Slicing shoes Landing Page From Figma To Next Js with framer motion and tailwind css",
+        icon: <Nextjssvg/>,
+        icon2: <Framersvg/>,
+        icon3: <Tailwindsvg/>,
+        icon4: <TypescriptSvg/>
+    },
+    {
+        title: "Cyber Ninja Landing Page",
+        href: '/img/cyber.jpg',
+        w: "1319",
+        h: 678,
+        src: 'https://cyberninja-linvxcode.vercel.app/',
+        body: "Slicing Cyber Ninja Landing Page From Figma To Next Js with framer motion and tailwind css",
+        icon: <Nextjssvg/>,
+        icon2: <Framersvg/>,
+        icon3: <Tailwindsvg/>,
+        icon4: <TypescriptSvg/>
+    },
+    {
         title: "Sport Landing Page",
         href: '/img/sport.jpg',
         w: "1080",

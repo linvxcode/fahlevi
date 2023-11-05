@@ -1,4 +1,5 @@
 import Image from "@/common/components/element/Image";
+import Link from "next/link";
 import React from "react";
 
 const EducationCard = () => {
@@ -13,7 +14,9 @@ const EducationCard = () => {
           className="w-[80px] h-[80px]"
         />
         <div className="flex flex-col space-y-2">
-          <h1 className="cap">Universitas Islam Kebangsaan Indonesia</h1>
+          <Link href='https://uniki.ac.id/' target="__blank" >
+          <h1 className="cap lg:hover:text-neutral-400 lg:transition-all lg:duration-300">Universitas Islam Kebangsaan Indonesia</h1>
+          </Link>
           <div className="dark:text-neutral-400 text-sm space-y-2 text-neutral-600">
             <h2>
               Bachelor&rsquo;s Degree

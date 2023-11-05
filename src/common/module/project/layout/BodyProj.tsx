@@ -8,7 +8,6 @@ import React, { useEffect, useState } from "react";
 import { motion, MotionConfig } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import useIsMobile from "@/common/hooks/useIsMobile";
-import { useWindowSize } from "usehooks-ts";
 
 type ProjectProps = {
   view: string;

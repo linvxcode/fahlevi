@@ -1,6 +1,5 @@
 "use client";
 import React, { FC, useEffect, useState } from "react";
-// import { InsrumentMenu } from '@/common/constant/InstrumentMenu'
 import SectionHeading from "@/common/components/element/SectionHeading";
 import Image from "@/common/components/element/Image";
 import Breakline from "@/common/components/element/Breakline";
