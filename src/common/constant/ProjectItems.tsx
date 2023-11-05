@@ -94,7 +94,7 @@ export const ProjectItems = [
     },
     {
         title: "Website Portofolio",
-        href: '/img/mockup-proto.png',
+        href: '/img/personal.jpg',
         w: "1080",
         h: 505,
         src: 'https://personal-website-linvxcode.vercel.app/',

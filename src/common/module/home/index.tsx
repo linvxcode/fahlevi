@@ -4,6 +4,7 @@ import Layouts from "@/common/components/element/Layouts";
 import Breakline from "@/common/components/element/Breakline";
 import SubHeadingSection from "./component/SubHeadingSection";
 import Location from "./component/Location";
+import ContactMail from "./component/ContactMail";
 
 export const Homepage = () => {
   return (
@@ -15,6 +16,8 @@ export const Homepage = () => {
         <Breakline/>
         <SubHeadingSection/>
         <ProjectPrevew />
+        <Breakline/>
+        <ContactMail/>
      </Layouts>
     </div>
   );
