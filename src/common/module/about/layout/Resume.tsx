@@ -20,7 +20,7 @@ const Resume = () => {
         icons={
           <AiOutlineDownload
             size={40}
-            className="text-neutral-600 lg:group-hover:text-neutral-300 lg:transition-all lg:duration-300"
+            className="dark:text-neutral-600 text-neutral-400 dark:lg:group-hover:text-neutral-300 lg:group-hover:text-neutral-700 lg:transition-all lg:duration-300"
           />
         }
       />
