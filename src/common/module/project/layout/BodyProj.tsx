@@ -8,15 +8,14 @@ import React, { useEffect, useState } from "react";
 import { motion, MotionConfig } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import useIsMobile from "@/common/hooks/useIsMobile";
+import { useMobile } from "@/common/hooks/useMobile";
 
 type ProjectProps = {
   view: string;
 }
 
 const BodyProj = ({view} : ProjectProps) => {
-  const isMobile = useMediaQuery({
-    query: '(max-width: 767px)'
-  })
+  const isMobile = useMobile()
 
   const [viewOption, setViewOption] = useState<string>()
 
@@ -24,43 +23,30 @@ const BodyProj = ({view} : ProjectProps) => {
     !isMobile ? setViewOption('grid') : setViewOption(view)
   }, [isMobile, view])
 
-  // const Anim: any = isMobile ? 
-  // {
-  //   initial: {},
-  //   whileInView: {},
-  //   transition: {}
-
-  // }: {
-  //   initial: {
-  //     opacity: 0,
-  //     scale: 0.8
-  //   },
-  //   animate: {
-  //     opacity: 1,
-  //     scale: 1,
-  //     transition: { duration: 0.3 }
-  //   },
-  //   transition: { duration: 0.3 },
-  //   viewport: {once:true}
-  // }
   
-  const Hover: any = isMobile ? {
-    whileHover:{}
-  } : {
+  const Hover: any = !isMobile ? {
     whileHover:{scale: 1.03}
+  } : {
   }
 
+  const Translate = !isMobile ? {
+    initial:{
+      opacity: 0, scale: 0.8
+    },
+    whileInView: {
+      opacity: 1, scale: 1,
+      transition: {duration: 0.3}
+    },
+    viewport: {once:true}
+  }: {}
+
   return (
-    <MotionConfig reducedMotion={isMobile ? 'always' : "never"}>
     <div className="grid md:grid-cols-2 grid-cols-1 flex-row flex-wrap gap-5 mt-10 max-md:justify-center">
       {ProjectItems?.map((item, index) => (
         <motion.div key={index} className=" group rounded-xl w-[100%] border-neutral-300 dark:border-neutral-700 border-[1px] dark:bg-neutral-800 bg-neutral-100 lg:hover:shadow-xl "
-        // {...Anim}
+        {...Translate}
         {...Hover}
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3 }}
-        viewport={{once:true}}
+
         >
           <Link href={item.src} target="__blank">
             <div className="relative  w-full">
@@ -100,7 +86,6 @@ const BodyProj = ({view} : ProjectProps) => {
         </motion.div>
       ))}
     </div>
-    </MotionConfig>
   );
 };
 

@@ -1,15 +1,33 @@
+"use client";
 import { PreviewProjectItems } from "@/common/constant/PreviewProjectItems";
 import Link from "next/link";
 import ImagePreview from "./ImagePreview";
-
+import { motion } from "framer-motion";
+import { useMobile } from "@/common/hooks/useMobile";
 
 const ProjectPrevew = () => {
+  const isMobile = useMobile();
+
+  const Slide = !isMobile
+    ? {
+        initial: {
+          translateX: 100,
+        },
+        animate: {
+          translateX: 0,
+          transition: { type: "spring", duration: 2 },
+        },
+        viewport: { once: true },
+      }
+    : {};
+
   return (
     <div className="flex gap-5 mt-10 overflow-x-scroll no-scrollbar">
       {PreviewProjectItems?.map((item, index) => (
-        <div
+        <motion.div
           key={index}
           className=" group rounded-xl border-[1px] border-neutral-300 dark:border-neutral-700 dark:bg-neutral-800/80 bg-neutral-200/80 lg:hover:shadow-xl lg:hover:transition-all lg:hover:duration-300 "
+          {...Slide}
         >
           <Link href={item.src} target="__blank">
             <ImagePreview item={item.href} />
@@ -20,7 +38,7 @@ const ProjectPrevew = () => {
               <h3></h3>
             </div>
           </Link>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
