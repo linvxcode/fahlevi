@@ -52,11 +52,21 @@ const GuitarComp = ({ params }: GuitarProps) => {
           />
           <Breakline />
           <SectionHeading title={`${instrumentData?.title} Virtual`} />
-
           <SubHead
             title="i made this for have fun , i hope you guys can fun with this guitar virtual"
             className="mt-3 mb-8"
           />
+          {instrumentData?.note && (
+            <>
+          <Breakline />
+          <SectionHeading title="Note"  />
+          <SubHead
+            title={`${instrumentData?.note}`}
+            className="mt-3 mb-8"
+          />
+          <Breakline />
+            </>
+          )}
           <GuitarPage />
         </>
       )}

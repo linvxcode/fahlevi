@@ -11,6 +11,7 @@ export async function retriveData(collectionName: string) {
         slug: doc.data().slug,
         img: doc.data().img,
         new: doc.data().new,
+        note: doc.data().note,
     }));
 
     return data;
