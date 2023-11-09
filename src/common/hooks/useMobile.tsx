@@ -1,20 +1,17 @@
-// utils/useIsMobile.js
 import { useEffect, useState } from 'react';
+import { useWindowSize } from 'usehooks-ts';
 
 export function useMobile() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const { width } = useWindowSize();
+  const [isMobile, setIsMobile] = useState(width < 768);
 
   useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener('resize', checkIsMobile);
-
-    return () => {
-      window.removeEventListener('resize', checkIsMobile);
-    };
-  }, []);
+      const newIsMobile = width < 768;
+      setIsMobile(newIsMobile);
+  }, [width]);
 
   return isMobile;
 }
+
+
+

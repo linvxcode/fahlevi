@@ -5,7 +5,7 @@ import React from "react";
 const EducationCard = () => {
   return (
     <div className="flex w-full bg-neutral-700/30 p-5 mt-3 rounded-xl">
-      <div className="flex gap-5">
+      <div className="flex max-md:flex-col gap-5">
         <Image
           src="/img/logo-uniki.png"
           alt="uniki"

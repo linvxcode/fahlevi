@@ -34,7 +34,6 @@ export const MobileMenu = ({ closeNavigation, className }: any) => {
           key={index}
           className={clsx(`mb-[20px] flex items-center`, className)}
           variants={variants}
-          whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
           <Link href={`${item?.href}`} onClick={closeNavigation}>
@@ -43,7 +42,7 @@ export const MobileMenu = ({ closeNavigation, className }: any) => {
                 pathname === item.href
                   ? " bg-neutral-200 dark:bg-neutral-800 rounded-xl transition-all dark:text-neutral-200 duration-700 scale-110"
                   : ""
-              } flex items-center group hover:text-white text-neutral-700 justify-start gap-3 hover:bg-neutral-200 dark:hover:bg-neutral-800 h-10 px-2  hover:scale-110 hover:rounded-xl hover:transition-all hover:duration-700`}
+              } flex items-center group hover:text-white text-neutral-700 justify-start gap-3 hover:bg-neutral-200 dark:hover:bg-neutral-800 h-10 px-2 hover:rounded-xl hover:transition-all hover:duration-700`}
             >
               <div
                 className={`${

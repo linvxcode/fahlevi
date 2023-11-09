@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState, useEffect } from "react";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import { useMobile } from "@/common/hooks/useMobile";
 
@@ -9,6 +9,17 @@ type LayoutProps = {
 
 const Layouts = ({ children }: LayoutProps) => {
   const isMobile = useMobile();
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const ifLoad = () => {
+      if (isMobile === true) {
+        setLoading(true);
+      }
+    };
+    ifLoad();
+  }, [isMobile]);
 
   const Translate = !isMobile
     ? {
@@ -27,7 +38,13 @@ const Layouts = ({ children }: LayoutProps) => {
     : {};
   return (
     <AnimatePresence>
-      <motion.div {...Translate}>{children}</motion.div>
+      {loading ? (
+        <>
+          <motion.div {...Translate}>{children}</motion.div>
+        </>
+      ) : (
+        <></>
+      )}
     </AnimatePresence>
   );
 };

@@ -3,12 +3,10 @@ import Image from "@/common/components/element/Image";
 import clsxm from "@/common/libs/clsxm";
 import React, { useEffect, useState } from "react";
 import ArrowR from "@/common/components/svg/ArrowR";
-import { useMediaQuery } from "react-responsive";
+import { useMobile } from "@/common/hooks/useMobile";
 
 const ImagePreview = ({ view, item }: any) => {
-  const isMobile = useMediaQuery({
-    query: "(max-width: 767px)",
-  });
+  const isMobile = useMobile();
 
   const [viewOption, setViewOption] = useState<string>();
 
