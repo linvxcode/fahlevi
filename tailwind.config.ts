@@ -57,6 +57,11 @@ const config: Config = {
     themes: {
       dark: {
         colors: {
+          background: "#171717",
+        },
+      },
+      light: {
+        colors: {
           background: "#F2F2F2",
         },
       },
