@@ -52,7 +52,7 @@ const BlogDetail = ({ params }: slugProps) => {
             className="object-cover w-full  h-40 mt-2 rounded-md lg:hover:scale-105 "
           />
           <Breakline />
-          <SectionHeading title={`${blog.title}`} className="sticky top-0 bg-neutral-900 py-5 z-[99]" />
+          <SectionHeading title={`${blog.title}`} className="sticky top-0 bg-neutral-900 py-5 z-[9]" />
           <SubHead className="" title={`${blog?.descintro}`} />
           <Breakline />
           <h1 className="text-2xl  text-white mb-3">Setup</h1>
@@ -64,7 +64,7 @@ const BlogDetail = ({ params }: slugProps) => {
           </div>
           <h1 className="mt-20 text-xl">2. Import Framer Motion</h1>
           <div className="block">
-            <Snippet symbol={false} className="mt-2">
+            <Snippet symbol={false} className="mt-2 flex no-scrollbar w-full overflow-scroll">
               {blog?.import}
             </Snippet>
           </div>

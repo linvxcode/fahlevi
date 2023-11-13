@@ -42,7 +42,7 @@ export const MobileMenu = ({ closeNavigation, className }: any) => {
                 pathname === item.href
                   ? " bg-neutral-200 dark:bg-neutral-800 rounded-xl transition-all dark:text-neutral-200 duration-700 scale-110"
                   : ""
-              } flex items-center group hover:text-white text-neutral-700 justify-start gap-3 hover:bg-neutral-200 dark:hover:bg-neutral-800 h-10 px-2 hover:rounded-xl hover:transition-all hover:duration-700`}
+              } flex items-center group  dark:hover:text-white text-neutral-700 dark:text-neutral-100 justify-start gap-3 hover:bg-neutral-200 dark:hover:bg-neutral-800 h-10 px-2 hover:rounded-xl hover:transition-all hover:duration-700`}
             >
               <div
                 className={`${

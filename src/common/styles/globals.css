@@ -171,6 +171,6 @@ box-shadow: 0.60032px 5.55296px 0.30016px 0px rgba(0, 0, 0, 0.10);
 
 .opc-fade{
   pointer-events: none;
-  background: linear-gradient( 152deg, #818080, transparent 70% );
+  background: linear-gradient( 152deg, #dfdfdfc7 , transparent 30% );
   position: absolute;
 }
