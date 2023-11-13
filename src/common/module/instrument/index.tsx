@@ -5,12 +5,6 @@ import SubHead from '@/common/components/element/SubHead'
 import Breakline from '@/common/components/element/Breakline'
 import HeadInstruments from './component/HeadInstruments'
 import { retriveData } from '@/common/libs/firebase/service'
-import { GetServerSideProps } from "next";
-
-
-// interface HomeProps {
-//   isMobile: boolean;
-// }
 
 const Instrument = async () => {
   const res = await retriveData('instruments');

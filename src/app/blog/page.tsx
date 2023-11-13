@@ -1,18 +1,18 @@
-import Project from '@/common/module/project'
+import BlogPage from '@/common/module/blog'
 import { Metadata } from 'next'
 import React from 'react'
 
 export const metadata: Metadata = {
-  title: 'Projects - Fahlevi',
+  title: 'Blog - Fahlevi',
   description: 'Personal Website',
 }
 
-const Projects = () => {
+const Blog = () => {
   return (
     <div>
-      <Project/>
+      <BlogPage  />
     </div>
   )
 }
 
-export default Projects
+export default Blog

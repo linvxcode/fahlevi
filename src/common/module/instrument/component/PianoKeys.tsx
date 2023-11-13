@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { pianoKeys } from "@/common/constant/Keys";
+import Introduction from "./Introduction";
 
 interface PianoKey {
   note: string;
@@ -128,8 +129,8 @@ const PianoKeys: React.FC = () => {
   }, [active]);
 
   return (
-    <div className="overflow-x-scroll w-[800px]">
-    <div className=" bg-neutral-700 p-2 rounded-md w-[800px] overflow-x-scroll flex relative">
+    <div className="overflow-x-scroll w-[800px] " >
+    <div className=" bg-neutral-700 p-2 rounded-md Piano w-[800px] overflow-x-scroll flex relative">
       {pianoKeys.map((key) => (
         <div
           key={key.note}
@@ -156,6 +157,7 @@ const PianoKeys: React.FC = () => {
         </div>
       ))}
     </div>
+    <Introduction />
     </div>
   );
 };

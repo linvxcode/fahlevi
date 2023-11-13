@@ -164,3 +164,13 @@ body {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.00) 0.41%, rgba(0, 0, 0, 0.00) 0.55%), linear-gradient(180deg, rgba(0, 0, 0, 0.10) 10%, rgba(255, 255, 255, 0.25) 15%, rgba(255, 255, 255, 0.80) 30%, rgba(255, 255, 255, 0.25) 45%, rgba(0, 0, 0, 0.60) 90%), #BA9;
 box-shadow: 0.60032px 5.55296px 0.30016px 0px rgba(0, 0, 0, 0.10);
 }
+
+.bg-card-blog{
+  background: linear-gradient(292deg, #18181838 6.93%, #000000e8 67.26%);
+}
+
+.opc-fade{
+  pointer-events: none;
+  background: linear-gradient( 152deg, #818080, transparent 70% );
+  position: absolute;
+}

@@ -9,6 +9,30 @@ import TypescriptSvg from "../components/svg/TypescriptSvg"
 
 export const ProjectItems = [
     {
+        title: "Live Music Landing Page",
+        href: '/img/livemusic.jpg',
+        w: "1342",
+        h: 659,
+        src: 'https://livemusiclandingpage.vercel.app/',
+        body: "Slicing Live Music Landing Page From Figma To Next Js with framer motion and tailwind css",
+        icon: <Nextjssvg/>,
+        icon2: <Framersvg/>,
+        icon3: <Tailwindsvg/>,
+        icon4: <TypescriptSvg/>
+    },
+    {
+        title: "Drink Landing Page",
+        href: '/img/energydrink.jpg',
+        w: "1342",
+        h: 659,
+        src: 'https://drinklandingpage.vercel.app/',
+        body: "Slicing Drink Landing Page From Figma To Next Js with framer motion and tailwind css",
+        icon: <Nextjssvg/>,
+        icon2: <Framersvg/>,
+        icon3: <Tailwindsvg/>,
+        icon4: <TypescriptSvg/>
+    },
+    {
         title: "Shoes Sport Landing Page",
         href: '/img/shoes.jpg',
         w: "1342",
