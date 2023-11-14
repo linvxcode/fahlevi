@@ -122,7 +122,7 @@ const GuitarPick = () => {
       <Fret11/>
       <Fret12/>
       <Fret13/>
-      <IntroductionGuitar />
+      {/* <IntroductionGuitar /> */}
     </div>
   );
 };

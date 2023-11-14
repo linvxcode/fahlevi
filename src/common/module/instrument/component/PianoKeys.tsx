@@ -157,7 +157,7 @@ const PianoKeys: React.FC = () => {
         </div>
       ))}
     </div>
-    <Introduction />
+    {/* <Introduction /> */}
     </div>
   );
 };
