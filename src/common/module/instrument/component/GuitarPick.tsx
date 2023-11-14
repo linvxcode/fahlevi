@@ -14,6 +14,7 @@ import Fret10 from "../fret/Fret10";
 import Fret11 from "../fret/Fret11";
 import Fret12 from "../fret/Fret12";
 import Fret13 from "../fret/Fret13";
+import IntroductionGuitar from "./IntoductionGuitar";
 
 interface PianoKey {
   note: string;
@@ -106,7 +107,7 @@ const GuitarPick = () => {
   };
 
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col guitar">
       <Pick/>
       <Fret1 guitarKeys={pianoKeys} handleClick={handleClick} />
       <Fret2 />
@@ -121,6 +122,7 @@ const GuitarPick = () => {
       <Fret11/>
       <Fret12/>
       <Fret13/>
+      <IntroductionGuitar />
     </div>
   );
 };

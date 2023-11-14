@@ -4,25 +4,25 @@ import { Boarding } from "boarding.js";
 import "boarding.js/styles/main.css";
 import "boarding.js/styles/themes/basic.css";
 
-function Introduction() {
+function IntroductionGuitar() {
   useEffect(() => {
     const boarding = new Boarding({
       opacity: 0.50
     });
     boarding.defineSteps([
       {
-        element: ".Piano",
+        element: ".guitar",
         popover: {
           title: "Piano Guide",
           description:
-            "to use the virtual piano can use the keyboard from A to L  And Z to M",
+            "There are still several keys that have not been filled in and will be filled soon because they are still in the development stage",
         },
       },
       {
-        element: '.keyc',
+        element: '.fret1',
         popover: {
-          title: "Key",
-          description: "Click With Mouse or Click With Keyboard"
+          title: "Fret",
+          description: "Click With Mouse to play guitar"
         }
       }
     ]);
@@ -32,4 +32,4 @@ function Introduction() {
   return <div />;
 }
 
-export default Introduction;
+export default IntroductionGuitar;

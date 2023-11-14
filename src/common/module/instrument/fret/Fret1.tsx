@@ -17,7 +17,7 @@ interface PianoKey {
 const Fret1: React.FC<Fret1Props> = ({ guitarKeys, handleClick }) => { 
   return (
     <div>
-      <div className="w-[60px] h-[210px] top-[-15px] border-r  border-[#000] absolute">
+      <div className="w-[60px] h-[210px] fret1 top-[-15px] border-r  border-[#000] absolute">
         {guitarKeys.map((key) => (
           <div className="flex justify-center flex-col" key={key.note}>
             <Button

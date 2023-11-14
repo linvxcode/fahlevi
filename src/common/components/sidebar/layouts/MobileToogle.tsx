@@ -15,8 +15,8 @@ const Path = (props: any) => (
 );
 
 export const MobileToggle = ({ toggle , className}: any) => (
-  <Button onClick={toggle} className={clsx(`absolute z-[99] top-[18px] right-0 w-[50px] h-[50px] bg-transparent`, className)} aria-label="Mobile Nav" >
-    <svg width="23" height="23" viewBox="0 0 23 23" className="stroke-white">
+  <Button onClick={toggle} className={clsx(`relative flex items-center right-0 w-[50px] h-[50px] bg-transparent`, className)} aria-label="Mobile Nav" >
+    <svg width="23" height="23" viewBox="0 0 23 23" className="stroke-white ">
       <Path
         variants={{
           closed: { d: "M 2 2.5 L 20 2.5" },

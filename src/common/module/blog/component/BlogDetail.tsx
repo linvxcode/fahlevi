@@ -39,7 +39,7 @@ const BlogDetail = ({ params }: slugProps) => {
       </Back>
       {loading ? (
         <>
-          <Loading />
+          <Loading className="" />
         </>
       ) : (
         <>
@@ -52,10 +52,10 @@ const BlogDetail = ({ params }: slugProps) => {
             className="object-cover w-full  h-40 mt-2 rounded-md lg:hover:scale-105 "
           />
           <Breakline />
-          <SectionHeading title={`${blog.title}`} className="sticky top-0 bg-neutral-900 py-5 z-[9]" />
+          <SectionHeading title={`${blog.title}`} className="sticky top-20 w-full bg-[#F2F2F2] dark:bg-neutral-900 py-5 z-[9]" />
           <SubHead className="" title={`${blog?.descintro}`} />
           <Breakline />
-          <h1 className="text-2xl  text-white mb-3">Setup</h1>
+          <h1 className="text-2xl  dark:text-white mb-3">Setup</h1>
           <h1 className="text-xl">1. Install Framer Motion</h1>
           <div className="block">
             <Snippet symbol={false} className="mt-2">npm i framer-motion</Snippet>

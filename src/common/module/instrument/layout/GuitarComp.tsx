@@ -38,7 +38,7 @@ const GuitarComp = ({ params }: GuitarProps) => {
       </Back>
       {loading ? (
         <>
-          <Loading />
+          <Loading className="" />
         </>
       ) : (
         <>

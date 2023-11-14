@@ -14,7 +14,7 @@ export const pianoKeys: PianoKey[] = [
       note: "C-",
       label: "C",
       type: "white",
-      className: "bg-white  w-[200px] h-[200px] ",
+      className: "bg-white  w-[200px] h-[200px] keyc",
       src: "/audio/tutsdown/c-.wav",
     },
     {

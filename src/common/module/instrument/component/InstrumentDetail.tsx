@@ -39,7 +39,7 @@ const InstrumentDetail = ({ params }: instrumentProps) => {
       </Back>
       {loading ? (
         <>
-          <Loading />
+          <Loading className="" />
         </>
       ) : (
         <>
