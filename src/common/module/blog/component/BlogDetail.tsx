@@ -52,7 +52,7 @@ const BlogDetail = ({ params }: slugProps) => {
             className="object-cover w-full  h-40 mt-2 rounded-md lg:hover:scale-105 "
           />
           <Breakline />
-          <SectionHeading title={`${blog.title}`} className="sticky top-20 md:top-0 w-full bg-[#F2F2F2] dark:bg-neutral-900 py-5 z-[9]" />
+          <SectionHeading title={`${blog.title}`} className="sticky top-24 md:top-0 w-full bg-[#F2F2F2] dark:bg-neutral-900 py-5 z-[9]" />
           <SubHead className="" title={`${blog?.descintro}`} />
           <Breakline />
           <h1 className="text-2xl  dark:text-white mb-3">Setup</h1>

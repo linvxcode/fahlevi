@@ -22,7 +22,7 @@ const ImagePreview = ({ view, item }: any) => {
         alt="img"
         priority
         className={clsxm(
-          "sm:rounded-xl sm:h-[8.5rem] object-cover w-full",
+          "sm:rounded-xl sm:h-[8.5rem] h-auto object-cover w-full",
           viewOption === "grid" ? "!rounded-t-xl !rounded-b-none !h-48" : ""
         )}
       />

@@ -5,27 +5,54 @@ import { Sidebar } from '@/common/components/sidebar'
 import { Providers } from '@/common/libs/Providers'
 
 const inter = Inter({ subsets: ['latin'] })
-const url = 'https://fahlevi.vercel.app/'
+const url = 'https://fahlevi.vercel.app'
+const img = '/img/imgPorto.png'
+const desc = 
+'web developer especially in Frontend side, with a passion for creating pixel-perfect web experiences.'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://fahlevi.vercel.app/'),
+  metadataBase: new URL('https://fahlevi.vercel.app'),
   title: 'Fahlevi - Personal Website',
-  description: 'web developer especially in Frontend side, with a passion for creating pixel-perfect web experiences. I work with JavaScript and specialize in all-things web. I thrive on collaborating with teams to deliver efficient, scalable, and visually appealing web applications.',
-  icons: '/img/upwork.jpeg',
+  description: desc,
+  icons: '/img/imgprofile.png',
+  
   openGraph: {
     title: 'Fahlevi - Personal Website',
-    description: 'web developer especially in Frontend side, with a passion for creating pixel-perfect web experiences. I work with JavaScript and specialize in all-things web. I thrive on collaborating with teams to deliver efficient, scalable, and visually appealing web applications.',
+    description: desc,
     type: 'website',
+    url: url ,
     images: [
       {
-        url: '/img/imgPorto.png',
+        url: img,
         alt: 'fahlevi.vercel.app og-image',
         width: 800,
         height: 600,
       },
+      {
+        url: img,
+        alt: 'fahlevi.vercel.app og-image',
+        width: 1200,
+        height: 630,
+      },
+      {
+        url: img,
+        alt: 'fahlevi.vercel.app og-image',
+        width: 1600,
+        height: 900,
+      },
     ],
+
     siteName: 'fahlevi.vercel.app'
-  }
+  },
+  twitter: {
+    creator: 'Fahlevi',
+    images: '/img/imgprofile.png',
+    card: 'summary_large_image',
+    site: '@site',
+    siteId: 'https://fahlevi.vercel.app/',
+    title: 'Fahlevi',
+    description: desc
+  },
 }
 
 export default function RootLayout({

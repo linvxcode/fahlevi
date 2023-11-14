@@ -6,7 +6,7 @@ import Buttons from "@/common/components/element/Buttons";
 
 const ContactMail = () => {
   return (
-    <div className="w-full h-auto bg-neutral-200 dark:bg-neutral-800 py-5 px-10 rounded-3xl mt-5">
+    <div className="w-full h-auto bg-neutral-200 dark:bg-neutral-800 py-5 px-5 rounded-3xl mt-5">
       <div className="flex gap-2  mb-2">
         <GoRocket size={30} />
         <SectionHeading title="Lets Work Together" className="!text-xl" />
