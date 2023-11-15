@@ -12,7 +12,7 @@ import {
   SiStyledcomponents,
   SiTailwindcss,
   SiTypescript,
-  SiFramer
+  SiFramer,
 } from 'react-icons/si';
 import Zustand from '../components/svg/Zustand';
 

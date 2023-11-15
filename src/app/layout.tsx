@@ -9,13 +9,26 @@ const url = 'https://fahlevi.vercel.app'
 const img = '/img/imgPorto.png'
 const desc = 
 'web developer especially in Frontend side, with a passion for creating pixel-perfect web experiences.'
+const keyword = 'nextjs, reactjs, blog, website, personal, personal, personalwebsite, portofolio'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://fahlevi.vercel.app'),
   title: 'Fahlevi - Personal Website',
   description: desc,
   icons: '/img/imgprofile.png',
-  
+  // <meta name="google-site-verification" content="fjLlPxGIXUXCmFZlnANXcLlSdWucmfDtroAf0M5F91M" />
+  verification: {
+    google: "fjLlPxGIXUXCmFZlnANXcLlSdWucmfDtroAf0M5F91M",
+  },
+  keywords: keyword,
+  creator: "Fahlevi",
+  authors: {
+    name: 'Fahlevi',
+    url: url
+  },
+  alternates: {
+    canonical: url,
+  },
   openGraph: {
     title: 'Fahlevi - Personal Website',
     description: desc,

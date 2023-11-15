@@ -1,20 +1,29 @@
 import BlogDetail from "@/common/module/blog/component/BlogDetail";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import React from "react";
-import Head from "next/head";
 import { retriveBlog } from "@/common/libs/firebase/service";
 import Layouts from "@/common/components/element/Layouts";
+import BlogFilter from "@/common/module/blog/component/BlogFilter";
 
 interface BlogProps {
   params: { slug: string };
 }
 
-const BlogSlug = ({ params, }: BlogProps) => {
+const BlogSlug = async ({ params, }: BlogProps) => {
   const { slug } = params;
-  return (
+  const data = await retriveBlog("blog");
+  const blog = data.find((item: any) => item.slug === slug);
+  const statusBlog = blog?.status;
+  return ( 
     <div>
       <Layouts >
-      <BlogDetail params={{ slug }}  />
+        {statusBlog === 'feutured' ? (
+          <BlogDetail params={{ slug }}  />
+          ): (
+            <>
+            <BlogFilter />
+            </>
+          )}
       </Layouts>
     </div>
   );
@@ -36,5 +45,6 @@ export async function generateMetadata(
   return {
     title: blog?.title + ' - ' + 'Fahlevi',
     description: blog?.descintro
+    
   };
 }
