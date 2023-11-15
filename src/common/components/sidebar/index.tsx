@@ -22,7 +22,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ children }) => {
         </div>
       </div>
       <main className="w-[80%] relative max-md:mt-20 max-md:w-[100%] max-w-[854px]">
-        <section className="max-w-[854px]">
+        <section className="max-w-[854px] relative">
           {children}
           </section>
       </main>
