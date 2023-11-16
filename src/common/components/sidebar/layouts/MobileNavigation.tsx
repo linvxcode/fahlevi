@@ -13,7 +13,7 @@ const variants = {
 };
 
 export const MobileNavigation = ({ closeNavigation, className }: any) => (
-  <motion.ul variants={variants} className={clsx(`p-[25px]  left-0 absolute top-[100px] w-[230px]`, className)}>
+  <motion.ul variants={variants} className={clsx(`p-[25px] z-[999] left-0 absolute top-[100px] w-[230px]`, className)}>
       <MobileMenu closeNavigation={closeNavigation} />
   </motion.ul>
 );

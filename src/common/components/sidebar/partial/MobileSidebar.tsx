@@ -50,7 +50,7 @@ const MobileSidebar = () => {
   return (
     <motion.nav
       className={`
-      flex justify-center bottom-0 fixed z-[9] top-[-10px] right-0  w-full transition-all duration-400`}
+      flex justify-center bottom-0 fixed z-[11] top-[-10px] right-0  w-full transition-all duration-400`}
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}
@@ -83,7 +83,8 @@ const MobileSidebar = () => {
           />
           <h1
             className={clsx(
-              scrolled ? "hidden" : "",
+              scrolled 
+              ? "hidden" : "",
               "text-xl font-bold flex gap-2 items-center"
             )}
           >
@@ -98,7 +99,8 @@ const MobileSidebar = () => {
               "text-xl font-bold  w-full flex gap-2 items-center transition-all duration-300 "
             )}
           >
-            {Menu?.title}
+            {Menu === undefined ? 'Fahlevi' : Menu?.title}
+            
             <span></span>
           </h1>
         </div>
