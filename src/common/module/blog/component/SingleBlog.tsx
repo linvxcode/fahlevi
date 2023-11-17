@@ -10,6 +10,7 @@ import Breakline from "@/common/components/element/Breakline";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { motion } from "framer-motion";
 import Loading from "../../instrument/component/Loading";
+import Layouts from "@/common/components/element/Layouts";
 interface Blog {
   id: string;
   slug: string;
@@ -48,7 +49,7 @@ const SingleBlog = () => {
           <Loading className="!h-[250px]" />
         </>
       ) : (
-        <>
+        <Layouts>
           {blog?.map((item, index) => (
             <Card isFooterBlurred className="relative group " key={index}>
               <Link href={`/blog/${item.slug}`}>
@@ -108,7 +109,7 @@ const SingleBlog = () => {
               </Link>
             </Card>
           ))}
-        </>
+        </Layouts>
       )}
     </div>
   );
