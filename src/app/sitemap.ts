@@ -6,13 +6,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: 'https://fahlevi.vercel.app',
       lastModified: new Date(),
       changeFrequency: 'yearly',
-      priority: 1,
+      priority: 0.7,
     },
     {
       url: 'https://fahlevi.vercel.app/about',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.7,
       
     },
     {
