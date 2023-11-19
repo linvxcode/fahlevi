@@ -21,15 +21,15 @@ const Fret9 = () => {
       label: "C#",
       type: "white",
       className: "bg-white",
-      src: "/audio/guitar/tuts/tutsup/cc+.wav",
+      src: "https://firebasestorage.googleapis.com/v0/b/instrument-90e24.appspot.com/o/guitar%2Ftuts%2Ftutsup%2Fcc%2B.wav?alt=media&token=91733e26-f6d5-46b8-a94d-cea9886ab817",
     },
-    // {
-    //   note: "C4",
-    //   label: "C4",
-    //   type: "white",
-    //   className: "bg-white",
-    //   src: "/audio/guitar/whitetuts/c.wav",
-    // },
+    {
+      note: "GDown#",
+      label: "GDown#",
+      type: "white",
+      className: "bg-white",
+      src: "https://firebasestorage.googleapis.com/v0/b/instrument-90e24.appspot.com/o/guitar%2Fsecondtuts%2Fgg%2B.wav?alt=media&token=aff0ec4b-77b3-4868-9429-2283d063e476",
+    },
     // {
     //   note: "A4",
     //   label: "A4",

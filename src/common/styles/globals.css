@@ -174,3 +174,14 @@ box-shadow: 0.60032px 5.55296px 0.30016px 0px rgba(0, 0, 0, 0.10);
   background: linear-gradient( 152deg, #dfdfdfc7 , transparent 30% );
   position: absolute;
 }
+
+#nprogress .bar {
+  background: #15b874 !important;
+
+}
+
+#nprogress .bar {
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 999999 !important;
+}

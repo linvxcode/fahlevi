@@ -13,6 +13,7 @@ const ImagePreview = ({ view, item }: any) => {
   useEffect(() => {
     !isMobile ? setViewOption("grid") : setViewOption(view);
   }, [isMobile, view]);
+
   return (
     <div className="relative w-full min-w-[350px]  flex !flex-col ">
       <Image

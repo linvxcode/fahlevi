@@ -20,15 +20,15 @@ const Fret8 = () => {
       label: "C",
       type: "white",
       className: "bg-white",
-      src: "/audio/guitar/tuts/tutsup/c+.wav",
+      src: "https://firebasestorage.googleapis.com/v0/b/instrument-90e24.appspot.com/o/guitar%2Ftuts%2Ftutsup%2Fc%2B.wav?alt=media&token=155a44e2-bce7-4229-89da-4bfb62845e85",
     },
-    // {
-    //   note: "C4",
-    //   label: "C4",
-    //   type: "white",
-    //   className: "bg-white",
-    //   src: "/audio/guitar/whitetuts/c.wav",
-    // },
+    {
+      note: "GDown",
+      label: "GDown",
+      type: "white",
+      className: "bg-white",
+      src: "https://firebasestorage.googleapis.com/v0/b/instrument-90e24.appspot.com/o/guitar%2Fsecondtuts%2Fg%2B.wav?alt=media&token=dc1d2444-279b-48b6-8055-bbc96b086722",
+    },
     // {
     //   note: "A4",
     //   label: "A4",

@@ -48,18 +48,18 @@ const GuitarPick = () => {
       src: "/audio/guitar/tuts/tutsup/f+.wav",
     },
     {
-      note: "C4",
-      label: "C4",
+      note: "CDown",
+      label: "CDown",
       type: "white",
       className: "bg-white",
-      src: "/audio/guitar/whitetuts/c.wav",
+      src: "https://firebasestorage.googleapis.com/v0/b/instrument-90e24.appspot.com/o/guitar%2Fsecondtuts%2Fc%2B.wav?alt=media&token=2e9fbede-b8fb-4702-a005-de8d5d00480c",
     },
     {
       note: "A4",
       label: "A4",
       type: "white",
       className: "bg-white",
-      src: "/audio/guitar/whitetuts/a.wav",
+      src: "https://firebasestorage.googleapis.com/v0/b/instrument-90e24.appspot.com/o/guitar%2Ftripletuts%2Fa%2B.wav?alt=media&token=e498164a-6d58-4b3d-b372-7d6aba4a4afa",
     },
     {
       note: "E4",
@@ -122,7 +122,7 @@ const GuitarPick = () => {
       <Fret11/>
       <Fret12/>
       <Fret13/>
-      {/* <IntroductionGuitar /> */}
+      <IntroductionGuitar />
     </div>
   );
 };

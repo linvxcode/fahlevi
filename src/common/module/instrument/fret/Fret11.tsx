@@ -21,7 +21,7 @@ function Fret11() {
       label: "D#",
       type: "white",
       className: "bg-white",
-      src: "/audio/guitar/tuts/tutsup/dd+.wav",
+      src: "https://firebasestorage.googleapis.com/v0/b/instrument-90e24.appspot.com/o/guitar%2Ftuts%2Ftutsup%2Fdd%2B.wav?alt=media&token=6ae7d292-37d0-457a-a9cb-b625c378e278",
     },
     // {
     //   note: "C4",

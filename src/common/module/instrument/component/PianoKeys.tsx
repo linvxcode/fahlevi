@@ -129,13 +129,13 @@ const PianoKeys: React.FC = () => {
   }, [active]);
 
   return (
-    <div className="overflow-x-scroll w-[800px] " >
-    <div className=" bg-neutral-700 p-2 rounded-md Piano w-[800px] overflow-x-scroll flex relative">
+    <div className="overflow-x-scroll w-[800px]  " >
+    <div className=" bg-neutral-700 p-2 rounded-md Piano  w-[800px] overflow-x-scroll flex relative">
       {pianoKeys.map((key) => (
         <div
           key={key.note}
           data-note={key.note}
-          className={`${key.className} cursor-pointer flex items-end mr-1 key rounded-md  ${
+          className={`${key.className} cursor-pointer  flex items-end mr-1 key rounded-md  ${
             active[key.note] ? "bg-[#949191] active " : ""
           }}`}
           onClick={() => handleClick(key.note)}
@@ -157,7 +157,7 @@ const PianoKeys: React.FC = () => {
         </div>
       ))}
     </div>
-    {/* <Introduction /> */}
+    <Introduction />
     </div>
   );
 };

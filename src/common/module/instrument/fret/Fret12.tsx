@@ -20,7 +20,7 @@ const Fret12 = () => {
       label: "E",
       type: "white",
       className: "bg-white",
-      src: "/audio/guitar/tuts/tutsup/e+.wav",
+      src: "https://firebasestorage.googleapis.com/v0/b/instrument-90e24.appspot.com/o/guitar%2Ftuts%2Ftutsup%2Fe%2B.wav?alt=media&token=fd7f438f-3dcd-4e56-bd96-aaab3214a5c1",
     },
     // {
     //   note: "C4",

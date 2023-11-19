@@ -59,7 +59,6 @@ const HeadInstruments = ({ view, data }: ProjectProps) => {
         viewport: { once: true },
       }
     : {};
-
   return (
     <div className="grid md:grid-cols-2 grid-cols-1 flex-row flex-wrap gap-5 mt-10 max-md:justify-center">
       {loading ? (
@@ -67,25 +66,25 @@ const HeadInstruments = ({ view, data }: ProjectProps) => {
           {data?.map((item, index) => (
             <motion.div
               key={index}
-              className="relative  group rounded-xl w-[100%] border-neutral-300 dark:border-neutral-700 border-[1px] dark:bg-neutral-800 bg-neutral-100 lg:hover:shadow-xl "
+              className="relative  group rounded-xl  border-neutral-300 dark:border-neutral-700 border-[1px] dark:bg-neutral-800/10 bg-neutral-100 lg:hover:shadow-xl "
               {...AnimateScale}
               {...Hover}
             >
-              <span className="absolute top-0 z-[9] w-auto text-center rounded-tr-xl rounded-bl-xl right-0 bg-green-600 text-black font-medium py-1 px-5">
+              <span className="absolute top-0 z-[9]  text-center rounded-tr-xl rounded-bl-xl right-0 bg-green-600 text-black font-medium py-1 px-5">
                 {item.new}
               </span>
               <Link href={`/instruments/${item.slug}`}>
-                <div className="relative  w-full">
+                <div className="relative ">
                   <Image
                     src={item.img}
                     width={400}
-                    height={626}
+                    height={100}
                     alt="img"
                     priority
                     className={clsxm(
-                      "sm:rounded-xl h-auto w-full sm:h-[100px]",
+                      "sm:rounded-xl sm:h-[8.5rem] object-cover  w-full",
                       viewOption === "grid"
-                        ? "!rounded-t-xl !rounded-b-none object-cover !h-[200px]"
+                        ? "!rounded-t-xl !rounded-b-none !h-[200px] "
                         : ""
                     )}
                   />
@@ -93,6 +92,7 @@ const HeadInstruments = ({ view, data }: ProjectProps) => {
                     <span>Preview</span>
                     <ArrowR />
                   </div>
+                <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 via-black/50" />
                 </div>
                 <motion.div className="p-5 overflow-hidden">
                   <p className="md:text-[17px]  font-medium text-neutral-600 dark:text-neutral-200 lg:group-hover:text-[#818cf8] dark:group-hover:text-[#818cf8] transition-all duration-300">

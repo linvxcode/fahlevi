@@ -9,7 +9,7 @@ import TypescriptSvg from "../components/svg/TypescriptSvg"
 
 export const ProjectItems = [
     {
-        title: "Live Music Landing Page",
+        title: "Live Music Landing Page", 
         href: '/img/livemusic.jpg',
         w: "1342",
         h: 659,

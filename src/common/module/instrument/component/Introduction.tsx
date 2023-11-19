@@ -5,7 +5,11 @@ import "boarding.js/styles/main.css";
 import "boarding.js/styles/themes/basic.css";
 
 function Introduction() {
+  const onBoardingPianoShown = localStorage.getItem('onBoardingPianoShown');
   useEffect(() => {
+    if(!onBoardingPianoShown){
+
+    
     const boarding = new Boarding({
       opacity: 0.50
     });
@@ -27,7 +31,10 @@ function Introduction() {
       }
     ]);
     boarding.start();
-  }, []);
+
+  }
+    localStorage.setItem('onBoardingPianoShown', 'true');
+  }, [onBoardingPianoShown]);
 
   return <div />;
 }

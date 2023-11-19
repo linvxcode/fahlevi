@@ -15,7 +15,7 @@ const Instrument = async () => {
      <SectionHeading title='Instruments' />
      <SubHead title='I recreated this feature from the results of my previous project' className='mt-3' />
      <Breakline/>
-     <HeadInstruments view='grid' data={data} />
+     <HeadInstruments view="grid" data={data} />
     </Layouts>
     </>
   )
