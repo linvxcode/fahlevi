@@ -24,9 +24,7 @@ const iconSize = 24;
 
 export const STACKS: stacksProps = {
   JavaScript: <SiJavascript size={iconSize} className='text-yellow-400' />,
-  'Framer Motion': (
-    <SiFramer size={iconSize}  /> 
-    ),
+  Framermotion: <SiFramer size={iconSize}  />,  
   TypeScript: <SiTypescript size={iconSize} className='text-blue-400' />,
   'Next.js': <SiNextdotjs size={iconSize} />,
   'React.js': <SiReact size={iconSize} className='text-sky-500' />,
@@ -35,9 +33,6 @@ export const STACKS: stacksProps = {
   Firebase: <SiFirebase size={iconSize} className='text-yellow-500' />,
   Zustand: <Zustand/>,
   Redux: <SiRedux size={iconSize} className='text-purple-500' />,
-  'Styled Components': (
-    <SiStyledcomponents size={iconSize} className='text-pink-500' />
-  ),
   Jest: <SiJest size={iconSize} className='text-red-600' />,
   CSS: <SiCss3 size={iconSize} className='text-blue-300' />,
   Jquery: <SiJquery size={iconSize} />,

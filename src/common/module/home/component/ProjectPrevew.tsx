@@ -33,13 +33,13 @@ const ProjectPrevew = () => {
   }, [isMobile]);
 
   return (
-    <div className="flex gap-5 mt-10 md:flex-row flex-col md:overflow-x-scroll no-scrollbar">
+    <div className="flex gap-5 mt-10 flex-row overflow-x-scroll no-scrollbar">
       {loading ? (
         <>
           {PreviewProjectItems?.map((item, index) => (
             <motion.div
               key={index}
-              className=" group max-md:overflow-hidden rounded-xl border-[1px] border-neutral-300 dark:border-neutral-700 dark:bg-neutral-800/80 bg-neutral-200/80 lg:hover:shadow-xl lg:hover:transition-all lg:hover:duration-300 "
+              className=" group  rounded-xl border-[1px] border-neutral-300 dark:border-neutral-700 dark:bg-neutral-800/80 bg-neutral-200/80 lg:hover:shadow-xl lg:hover:transition-all lg:hover:duration-300 "
               {...Slide}
             >
               <Link href={item.src} target="__blank">

@@ -4,7 +4,7 @@ import React from "react";
 
 const EducationCard = () => {
   return (
-    <div className="flex w-full bg-neutral-700/30 p-5 mt-3 rounded-xl">
+    <div className="flex w-full dark:bg-neutral-800 dark:border-neutral-700 border-neutral-300 border-[1px] bg-neutral-200 p-5 mt-3 rounded-xl">
       <div className="flex max-md:flex-col gap-5">
         <Image
           src="/img/logo-uniki.png"

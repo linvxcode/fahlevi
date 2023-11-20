@@ -1,7 +1,6 @@
 import SectionHeading from '@/common/components/element/SectionHeading'
 import React from 'react'
 import Slider from '../component/Slider'
-import { BiCodeAlt as SkillsIcon } from 'react-icons/bi';
 
 const Skill = () => {
   return (

@@ -185,3 +185,9 @@ box-shadow: 0.60032px 5.55296px 0.30016px 0px rgba(0, 0, 0, 0.10);
   top: 0 !important;
   z-index: 999999 !important;
 }
+
+.bgcard{
+  background-image: url('/img/img.png');
+  width: 100%;
+  object-fit: cover;
+}

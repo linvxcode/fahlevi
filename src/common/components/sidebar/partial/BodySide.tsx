@@ -1,5 +1,8 @@
+'use client'
 import React from 'react'
 import VerifiedSvg from '../../svg/VerifiedSvg'
+import { FaArrowDown } from "react-icons/fa";
+import { Button } from '@nextui-org/react';
 
 const BodySide = () => {
   return (

@@ -18,7 +18,7 @@ const Buttons = ({className= '', icons,icon, href, title}: ButtonsProps) => {
       color="default"
       className={clsx("lg:hover:bg-neutral-600 relative group lg:transition-all lg:duration-300", className)}
       as={Link}
-      href={href}
+      href={href && href}
       target="__blank"
     >
       <h1 className=" z-[9] flex items-center gap-2 dark:lg:group-hover:text-black lg:group-hover:text-white lg:transition-all lg:duration-300 relative">
