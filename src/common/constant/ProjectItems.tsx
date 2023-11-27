@@ -9,6 +9,18 @@ import TypescriptSvg from "../components/svg/TypescriptSvg"
 
 export const ProjectItems = [
     {
+        title: "Headphone Landing Page", 
+        href: '/img/headphone.jpg',
+        w: "1342",
+        h: 659,
+        src: 'https://headphone-linvxcode.vercel.app/',
+        body: "Slicing Headphone Landing Page From Figma To Next Js with framer motion and tailwind css",
+        icon: <Nextjssvg/>,
+        icon2: <Framersvg/>,
+        icon3: <Tailwindsvg/>,
+        icon4: <TypescriptSvg/>
+    },
+    {
         title: "Live Music Landing Page", 
         href: '/img/livemusic.jpg',
         w: "1342",
