@@ -9,6 +9,17 @@ import TypescriptSvg from "../components/svg/TypescriptSvg"
 
 export const ProjectItems = [
     {
+        title: "Landing Page - Fahlevi", 
+        href: '/img/Cover-Landing-Page.png',
+        w: "1342",
+        h: 659,
+        src: 'https://landing-page-linvxcode.vercel.app/',
+        body: "landing page a sophisticated and tidy aesthetic, blending elegant visual built with next js framer motion and tailwind css",
+        icon: <Nextjssvg/>,
+        icon2: <Framersvg/>,
+        icon3: <Tailwindsvg/>,
+    },
+    {
         title: "Headphone Landing Page", 
         href: '/img/headphone.jpg',
         w: "1342",
